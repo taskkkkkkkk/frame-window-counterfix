@@ -143,7 +143,7 @@ void startGlobalRecalc() {
                 int64_t inp = flatInputs[m].input;
                 T[m] = t_m;
 
-                double w_m = flatInputs[m].window / fps;
+                double w_m = flatInputs[m].window / 240;
 
                 double n_mult = std::exp(-kT * t_m);
                 double f_mult = std::exp(-kU * static_cast<double>(inp));
